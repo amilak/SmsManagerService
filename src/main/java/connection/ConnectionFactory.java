@@ -30,6 +30,7 @@ public class ConnectionFactory
             String user = ConfigReaderSMPP.prop.get( USER );
             String password = ConfigReaderSMPP.prop.get( PASSWORD );
 
+            DriverManager.registerDriver(new com.mysql.jdbc.Driver ());
             Connection conn = DriverManager.getConnection( url1, user, password );
             if( conn != null )
             {
