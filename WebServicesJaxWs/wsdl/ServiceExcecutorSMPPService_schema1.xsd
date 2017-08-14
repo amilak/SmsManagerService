@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://sms.ap.com" xmlns:tns="http://sms.ap.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="createSession" type="tns:createSession"/>
+
+  <xs:element name="createSessionResponse" type="tns:createSessionResponse"/>
+
+  <xs:element name="init" type="tns:init"/>
+
+  <xs:element name="initResponse" type="tns:initResponse"/>
+
+  <xs:element name="reconnectAfter" type="tns:reconnectAfter"/>
+
+  <xs:element name="reconnectAfterResponse" type="tns:reconnectAfterResponse"/>
+
+  <xs:complexType name="init">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="initResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="reconnectAfter">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="reconnectAfterResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="createSession">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="createSessionResponse">
+    <xs:sequence/>
+  </xs:complexType>
+</xs:schema>
+

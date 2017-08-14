@@ -1,0 +1,61 @@
+CREATE TABLE `aplp`.`users` (
+  `user_name` VARCHAR(50) NOT NULL COMMENT '',
+  `first_name` VARCHAR(100) NOT NULL COMMENT '',
+  `last_name` VARCHAR(100) NOT NULL COMMENT '',
+  `password` VARCHAR(200) NOT NULL COMMENT '',
+  `email` VARCHAR(100) NULL COMMENT '',
+  `admin` CHAR(1) NOT NULL COMMENT '',
+  `date_created` DATETIME NOT NULL COMMENT '',
+  `last_modified` DATETIME NOT NULL COMMENT '',
+  PRIMARY KEY (`user_name`)  COMMENT '');
+
+
+  CREATE TABLE `aplp`.`apcodes` (
+    `code` VARCHAR(100) NOT NULL COMMENT '',
+    `productCode` VARCHAR(100) NOT NULL COMMENT '',
+    `quantity` VARCHAR(45) NOT NULL COMMENT '',
+    `user` VARCHAR(45) NOT NULL COMMENT '',
+    `status` INT NOT NULL COMMENT '',
+    `date_created` DATETIME NOT NULL COMMENT '',
+    `last_modified` DATETIME NOT NULL COMMENT '',
+    `ApCodescol` VARCHAR(45) NOT NULL COMMENT '',
+    PRIMARY KEY (`code`)  COMMENT '');
+
+
+
+
+CREATE TABLE `aplp`.`customers` (
+  `customerId` INT(5) NOT NULL COMMENT '',
+  `name` VARCHAR(100) NULL COMMENT '',
+  `NIC` VARCHAR(11) NULL COMMENT '',
+  `phoneNumber` VARCHAR(11) NOT NULL COMMENT '',
+  `territory` VARCHAR(45) NULL COMMENT '',
+  `houseNo` VARCHAR(45) NULL COMMENT '',
+  `street1` VARCHAR(45) NULL COMMENT '',
+  `street2` VARCHAR(45) NULL COMMENT '',
+  `city` VARCHAR(45) NULL COMMENT '',
+  `dealers` VARCHAR(150) NULL COMMENT '',
+  `date_created` DATETIME NULL COMMENT '',
+  `last_modified` DATETIME NULL COMMENT '',
+  `created_by` VARCHAR(50) NULL COMMENT '',
+  `modified_by` VARCHAR(50) NULL COMMENT '',
+  PRIMARY KEY (`customerId`)  COMMENT '',
+  UNIQUE INDEX `phoneNumber_UNIQUE` (`phoneNumber` ASC)  COMMENT '',
+  UNIQUE INDEX `NIC_UNIQUE` (`NIC` ASC)  COMMENT '');
+
+
+
+  CREATE TABLE `aplp`.`points` (
+    `pointId` INT NOT NULL AUTO_INCREMENT COMMENT '',
+    `productCode` VARCHAR(45) NOT NULL COMMENT '',
+    `productType` VARCHAR(45) NOT NULL COMMENT '',
+    `sub_Category` VARCHAR(45) NOT NULL COMMENT '',
+    `apCode` VARCHAR(45) NOT NULL COMMENT '',
+    `date` DATETIME NOT NULL COMMENT '',
+    `phoneNumber` VARCHAR(45) NOT NULL COMMENT '',
+    `name` VARCHAR(45) NOT NULL COMMENT '',
+    `territory` VARCHAR(45) NOT NULL COMMENT '',
+    `nic` VARCHAR(45) NOT NULL COMMENT '',
+    `points` INT NOT NULL COMMENT '',
+    PRIMARY KEY (`pointId`)  COMMENT '');
+
